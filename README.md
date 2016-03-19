@@ -1,2 +1,4 @@
+#A Personal Page Haiku
 victorhom.net
-made with react and sass. Webpacked fueled.
+react and sass make me smile
+much wow webpack fueled
