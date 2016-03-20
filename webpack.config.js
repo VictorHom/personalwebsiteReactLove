@@ -1,19 +1,22 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-  entry: './main.js',
+  devtool: 'eval',
+  entry: ['webpack/hot/only-dev-server', './app/main.js'],
   output: {
-    path: path.join(__dirname, 'browser'),
+    path: __dirname + "/dist",
     filename: 'bundle.js'
   },
   module: {
     loaders: [{
       test: /\.js$/,
-      loader: 'babel-loader',
-      query: {
-        presets: ['es2015', 'react']
-      },
+      loaders: ['react-hot','babel-loader'],
+      include: path.join(__dirname, 'app'),
+      // query: {
+      //   presets: ['es2015', 'react']
+      // },
       exclude: /node_modules/
     }, {
       test: /\.scss$/,
@@ -30,5 +33,6 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('[name].css'),
+    new webpack.HotModuleReplacementPlugin()
   ]
 }

@@ -1,5 +1,0 @@
-// starting point for webpack
-import './app/styles/index.scss';
-import React from 'react';
-import ReactDom from 'react-dom';
-import App from './app/';
