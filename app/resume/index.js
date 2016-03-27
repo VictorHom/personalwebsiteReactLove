@@ -6,4 +6,4 @@ class Resume extends React.Component {
  }
 }
 
-module.exports = Resume;
+module.exports = {Resume};

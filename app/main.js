@@ -1,7 +1,7 @@
 // entry point for webpack
 import './styles/index.scss';
 import {Doodles} from './doodles/';
-import {Home} from './home/';
+import Home from './home/';
 import {Portfolio} from './portfolio/';
 import {Resume} from './resume/';
 import {SocialMedia} from './socialmedia/';
@@ -25,6 +25,7 @@ const App = React.createClass({
           <li><Link to="/resume">Resume</Link></li>
           <li><Link to="/doodles">Doodles</Link></li>
           <li><Link to="/connect">Connect</Link></li>
+          <li><Link to="/aboutTest">aboutTest</Link></li>
         </ul>
         {this.props.children}
       </div>
@@ -32,11 +33,11 @@ const App = React.createClass({
   }
 })
 
-// const About = React.createClass({
-//   render() {
-//     return <h3>About</h3>
-//   }
-// })
+const AboutTest = React.createClass({
+  render() {
+    return <h3>About</h3>
+  }
+})
 
 // const Inbox = React.createClass({
 //   render() {
@@ -70,8 +71,10 @@ render((
       <Route path="resume" component={Resume} />
       <Route path="doodles" component={Doodles} />
       <Route path="connect" component={SocialMedia} />
-      <Redirect from="/" to="/home" />
-      <Route path="*" component={Home} />
+      <Route path="aboutTest" component={AboutTest} />
+      {/*AboutTest*/}
+      {/*<Redirect from="/" to="/home" />*/}
+      {/*<Route path="*" component={Home} />*/}
       {/*<DefaultRoute component={App} />
       <NotFoundRoute component={Home} />*/}
     </Route>
