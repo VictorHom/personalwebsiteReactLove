@@ -64,16 +64,16 @@ const App = React.createClass({
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={App} />
+      <IndexRoute component={Home} />
       <Route path="about" component={Home} />
       <Route path="portfolio" component={Portfolio} />
       <Route path="resume" component={Resume} />
       <Route path="doodles" component={Doodles} />
       <Route path="connect" component={SocialMedia} />
       <Redirect from="/" to="/home" />
-      <NotFoundRoute handler={Home} />
-      {/*<DefaultRoute handler={App} />*/}
-      {/*<NotFoundRoute handler={Dashboard} />*/}
+      <Route path="*" component={Home} />
+      {/*<DefaultRoute component={App} />
+      <NotFoundRoute component={Home} />*/}
     </Route>
   </Router>
 ), document.getElementById('app'))
