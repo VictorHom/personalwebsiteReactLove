@@ -1,5 +1,6 @@
 import React from 'react';
-class SocialMedia extends React.Component {
+
+export default class SocialMedia extends React.Component {
   render() {
     return (
       <div>
@@ -46,5 +47,3 @@ class SocialMedia extends React.Component {
     )
   }
 };
-
-module.exports = SocialMedia;

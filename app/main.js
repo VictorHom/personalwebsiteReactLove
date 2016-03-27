@@ -1,10 +1,10 @@
 // entry point for webpack
 import './styles/index.scss';
-import {Doodles} from './doodles/';
+import Doodles from './doodles/';
 import Home from './home/';
-import {Portfolio} from './portfolio/';
-import {Resume} from './resume/';
-import {SocialMedia} from './socialmedia/';
+import Portfolio from './portfolio/';
+import Resume from './resume/';
+import SocialMedia from './socialmedia/';
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route,
@@ -71,11 +71,9 @@ render((
       <Route path="resume" component={Resume} />
       <Route path="doodles" component={Doodles} />
       <Route path="connect" component={SocialMedia} />
-      <Route path="aboutTest" component={AboutTest} />
-      {/*AboutTest*/}
-      {/*<Redirect from="/" to="/home" />*/}
-      {/*<Route path="*" component={Home} />*/}
-      {/*<DefaultRoute component={App} />
+      <Redirect from="/" to="/home" />
+      <Route path="*" component={Home} />
+      {/*<DefaultRoute component={Home} />
       <NotFoundRoute component={Home} />*/}
     </Route>
   </Router>
