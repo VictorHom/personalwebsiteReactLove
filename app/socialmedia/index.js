@@ -1,6 +1,6 @@
 import React from 'react';
-let SocialMedia = React.createClass({
-  render : function() {
+class SocialMedia extends React.Component {
+  render() {
     return (
       <div>
         <div className='social-media'>
@@ -45,6 +45,6 @@ let SocialMedia = React.createClass({
       </div>
     )
   }
-});
+};
 
 module.exports = SocialMedia;

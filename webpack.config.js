@@ -9,6 +9,10 @@ module.exports = {
     path: __dirname + "/dist",
     filename: 'bundle.js'
   },
+  devServer: {
+    hot: true, // need to check if this works
+     //can run webpack-dev-server and you get hot reloading
+  },
   module: {
     loaders: [{
       test: /\.js$/,
