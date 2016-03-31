@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    hot: true, // need to check if this works
+    hot: true // need to check if this works
      //can run webpack-dev-server and you get hot reloading
   },
   module: {

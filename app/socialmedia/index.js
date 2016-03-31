@@ -3,7 +3,7 @@ import React from 'react';
 export default class SocialMedia extends React.Component {
   render() {
     return (
-      <div>
+      <div className="col lg-col-12 md-col-8 sm-col-8 p4">
         <div className='social-media'>
           <ul>
             <li>

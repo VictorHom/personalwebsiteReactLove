@@ -1,80 +1,60 @@
 // entry point for webpack
 import './styles/index.scss';
-import Doodles from './doodles/';
 import Home from './home/';
+import Doodles from './doodles/';
+import About from './about/';
 import Portfolio from './portfolio/';
 import Resume from './resume/';
 import SocialMedia from './socialmedia/';
+import VHHeader from './vhheader/'
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route,
   Link, browserHistory, hashHistory,
   IndexRoute, Redirect,
-  DefaultRoute, NotFoundRoute
+  DefaultRoute
   } from 'react-router';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
 const App = React.createClass({
   render() {
     return (
-      <div>
-        <h1>App</h1>
-        <ul>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/portfolio">Portfolio</Link></li>
-          <li><Link to="/resume">Resume</Link></li>
-          <li><Link to="/doodles">Doodles</Link></li>
-          <li><Link to="/connect">Connect</Link></li>
-          <li><Link to="/aboutTest">aboutTest</Link></li>
+      <div className="container application fit clearfix">
+        <nav className="nav-container">
+        <ul className="full-menu">
+          <li><Link className="text-decoration-none menu-item" to="/">Home</Link></li>
+          <li><Link className="text-decoration-none menu-item" to="/about">About</Link></li>
+          <li><Link className="text-decoration-none menu-item" to="/portfolio">Portfolio</Link></li>
+          <li><Link className="text-decoration-none menu-item" to="/resume">Resume</Link></li>
+          <li><Link className="text-decoration-none menu-item" to="/doodles">Doodles</Link></li>
+          <li><Link className="text-decoration-none menu-item" to="/connect">Connect</Link></li>
         </ul>
-        {this.props.children}
+        </nav>
+        <div class="app-vhheader-wrap">
+          <VHHeader></VHHeader>
+        </div>
+        <div className="application-content pl3">
+          <div className=".clearfix">
+            {this.props.children}
+          </div>
+        </div>
       </div>
+
     )
   }
 })
 
-const AboutTest = React.createClass({
-  render() {
-    return <h3>About</h3>
-  }
-})
-
-// const Inbox = React.createClass({
-//   render() {
-//     return (
-//       <div>
-//         <h2>Inbox</h2>
-//         {this.props.children || "Welcome to your Inbox"}
-//       </div>
-//     )
-//   }
-// })
-
-// const Message = React.createClass({
-//   render() {
-//     return <h3>Message {this.props.params.id}</h3>
-//   }
-// })
-
-// const Dashboard = React.createClass({
-//   render() {
-//     return <div>Welcome to the app!</div>
-//   }
-// })
-
 render((
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
+    <Route  path="/" component={App}>
       <IndexRoute component={Home} />
-      <Route path="about" component={Home} />
+      <Route path="about" component={About} />
       <Route path="portfolio" component={Portfolio} />
       <Route path="resume" component={Resume} />
       <Route path="doodles" component={Doodles} />
       <Route path="connect" component={SocialMedia} />
-      <Redirect from="/" to="/home" />
-      <Route path="*" component={Home} />
-      {/*<DefaultRoute component={Home} />
-      <NotFoundRoute component={Home} />*/}
+      <Route path="/*" component={Home} />
     </Route>
+    <Route path="*" component={App} />
+    <Redirect from="/" to="/" />
   </Router>
 ), document.getElementById('app'))
