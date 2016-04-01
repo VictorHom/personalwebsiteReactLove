@@ -29,7 +29,7 @@ const App = React.createClass({
           <li><Link className="text-decoration-none menu-item" to="/connect">Connect</Link></li>
         </ul>
         </nav>
-        <div class="app-vhheader-wrap">
+        <div className="app-vhheader-wrap">
           <VHHeader></VHHeader>
         </div>
         <div className="application-content pl3">
