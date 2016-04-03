@@ -15,8 +15,7 @@ import { Router, Route,
   DefaultRoute
   } from 'react-router';
 
-const App = React.createClass({
-  render() {
+const App =  ({children}) => {
     return (
       <div className="container application fit clearfix">
         <nav className="nav-container">
@@ -34,14 +33,41 @@ const App = React.createClass({
         </div>
         <div className="application-content pl3">
           <div className=".clearfix">
-            {this.props.children}
+            {children}
           </div>
         </div>
       </div>
 
     )
-  }
-})
+}
+
+// const App = React.createClass({
+//   render() {
+//     return (
+//       <div className="container application fit clearfix">
+//         <nav className="nav-container">
+//         <ul className="full-menu">
+//           <li><Link className="text-decoration-none menu-item" to="/">Home</Link></li>
+//           <li><Link className="text-decoration-none menu-item" to="/about">About</Link></li>
+//           <li><Link className="text-decoration-none menu-item" to="/portfolio">Portfolio</Link></li>
+//           <li><Link className="text-decoration-none menu-item" to="/resume">Resume</Link></li>
+//           <li><Link className="text-decoration-none menu-item" to="/doodles">Doodles</Link></li>
+//           <li><Link className="text-decoration-none menu-item" to="/connect">Connect</Link></li>
+//         </ul>
+//         </nav>
+//         <div className="app-vhheader-wrap">
+//           <VHHeader></VHHeader>
+//         </div>
+//         <div className="application-content pl3">
+//           <div className=".clearfix">
+//             {this.props.children}
+//           </div>
+//         </div>
+//       </div>
+//
+//     )
+//   }
+// })
 
 render((
   <Router history={browserHistory}>
