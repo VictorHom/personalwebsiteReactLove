@@ -5,3 +5,7 @@ much wow webpack fueled
 
 Notes to self:
 get basscss into webpack; currently using cdn
+
+next steps:
+embed pdf viewer/ capability into site
+have cards for linking to projects

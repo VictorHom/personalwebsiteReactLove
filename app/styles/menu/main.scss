@@ -6,7 +6,7 @@
   // padding-left: 10%;
   // the below takes the nav off the screen
   // the click should toggle a transition animation
-  left : -10%;
+  left : -25%;
   transition-property : left;
   transition-duration : 2s;
   transition-delay: 0;
@@ -22,7 +22,7 @@
 .application-content {
   transition-property : color, transform, opacity;
   transition-duration : 2s, 2s, 2s;
-  transition-delay: 0, 0, 0;
+  // transition-delay: 0, 0, 0;
 }
 
 .text-grayout {
