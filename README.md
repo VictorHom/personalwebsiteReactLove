@@ -9,3 +9,4 @@ get basscss into webpack; currently using cdn
 next steps:
 embed pdf viewer/ capability into site
 have cards for linking to projects
+have a toggle when you click anywhere else that is not the nav area

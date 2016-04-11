@@ -8,7 +8,7 @@
   // the click should toggle a transition animation
   left : -25%;
   transition-property : left;
-  transition-duration : 2s;
+  transition-duration : 1.5s;
   transition-delay: 0;
 }
 
@@ -21,7 +21,7 @@
 
 .application-content {
   transition-property : color, transform, opacity;
-  transition-duration : 2s, 2s, 2s;
+  transition-duration : 1s, 1s, 1s;
   // transition-delay: 0, 0, 0;
 }
 

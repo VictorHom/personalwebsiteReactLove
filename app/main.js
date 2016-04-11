@@ -39,7 +39,6 @@ class App extends React.Component {
         <nav className="nav-container">
         <ul className="full-menu" >
           <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/">Home</Link></li>
-          <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/about">About</Link></li>
           <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/portfolio">Portfolio</Link></li>
           <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/resume">Resume</Link></li>
           <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/doodles">Doodles</Link></li>
@@ -63,7 +62,6 @@ class App extends React.Component {
 render((
   <Router history={hashHistory}>
     <Route  path="/" component={App}>
-      <Route path="about" component={About} />
       <Route path="portfolio" component={Portfolio} />
       <Route path="resume" component={Resume} />
       <Route path="doodles" component={Doodles} />
