@@ -17,28 +17,37 @@ import { Router, Route,
 
 class App extends React.Component {
 
-  showNav() {
-    // var myNav = document.getElementsByClassName("nav-container")[0]
-    // myNav.classList.add("nav-container-show")
-    const navigationComponent = document.getElementsByClassName("nav-container")[0];
-
+  toggleNav() {
+    const content = document.getElementsByClassName("application-content")[0];
+    const nav = document.getElementsByClassName("nav-container")[0];
+    if (nav.classList.contains("nav-container-show")) {
+      nav.classList.remove("nav-container-show")
+    } else {
+      nav.classList.add("nav-container-show")
+    }
+    //gray out the text
+    if (content.classList.contains("text-grayout")) {
+      content.classList.remove("text-grayout");
+    } else {
+      content.classList.add("text-grayout");
+    }
   }
 
   render(){
     return (
       <div className="container application fit clearfix">
         <nav className="nav-container">
-        <ul className="full-menu">
-          <li><Link className="text-decoration-none menu-item" to="/">Home</Link></li>
-          <li><Link className="text-decoration-none menu-item" to="/about">About</Link></li>
-          <li><Link className="text-decoration-none menu-item" to="/portfolio">Portfolio</Link></li>
-          <li><Link className="text-decoration-none menu-item" to="/resume">Resume</Link></li>
-          <li><Link className="text-decoration-none menu-item" to="/doodles">Doodles</Link></li>
-          <li><Link className="text-decoration-none menu-item" to="/connect">Connect</Link></li>
+        <ul className="full-menu" >
+          <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/">Home</Link></li>
+          <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/about">About</Link></li>
+          <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/portfolio">Portfolio</Link></li>
+          <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/resume">Resume</Link></li>
+          <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/doodles">Doodles</Link></li>
+          <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/connect">Connect</Link></li>
         </ul>
         </nav>
         <div className="app-vhheader-wrap">
-          <VHHeader></VHHeader>
+          <VHHeader toggleNav={this.toggleNav}></VHHeader>
         </div>
         <div className="application-content pl3">
           <div className=".clearfix main-surround">

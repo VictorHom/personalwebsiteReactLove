@@ -8,7 +8,7 @@
   // the click should toggle a transition animation
   left : -10%;
   transition-property : left;
-  transition-duration : 1s;
+  transition-duration : 2s;
   transition-delay: 0;
 }
 
@@ -17,4 +17,16 @@
 // the nav should slide back
 .nav-container-show {
   left : 8%;
+}
+
+.application-content {
+  transition-property : color, transform, opacity;
+  transition-duration : 2s, 2s, 2s;
+  transition-delay: 0, 0, 0;
+}
+
+.text-grayout {
+  color: #c0c0c0;
+  transform: translate3d(250px, 0, 0);
+  opacity: 0.4;
 }

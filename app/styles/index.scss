@@ -19,7 +19,8 @@ body {
   width : 100%;
 
   .main-surround {
-
+    height : 100vh;
+    
     > div {
       //  I want this only when the button is clicked
       padding-left: 25%;
