@@ -15,7 +15,16 @@ import { Router, Route,
   DefaultRoute
   } from 'react-router';
 
-const App =  ({children}) => {
+class App extends React.Component {
+
+  showNav() {
+    // var myNav = document.getElementsByClassName("nav-container")[0]
+    // myNav.classList.add("nav-container-show")
+    const navigationComponent = document.getElementsByClassName("nav-container")[0];
+
+  }
+
+  render(){
     return (
       <div className="container application fit clearfix">
         <nav className="nav-container">
@@ -32,55 +41,28 @@ const App =  ({children}) => {
           <VHHeader></VHHeader>
         </div>
         <div className="application-content pl3">
-          <div className=".clearfix">
-            {children}
+          <div className=".clearfix main-surround">
+            {this.props.children}
           </div>
         </div>
       </div>
 
     )
+  }
 }
-
-// const App = React.createClass({
-//   render() {
-//     return (
-//       <div className="container application fit clearfix">
-//         <nav className="nav-container">
-//         <ul className="full-menu">
-//           <li><Link className="text-decoration-none menu-item" to="/">Home</Link></li>
-//           <li><Link className="text-decoration-none menu-item" to="/about">About</Link></li>
-//           <li><Link className="text-decoration-none menu-item" to="/portfolio">Portfolio</Link></li>
-//           <li><Link className="text-decoration-none menu-item" to="/resume">Resume</Link></li>
-//           <li><Link className="text-decoration-none menu-item" to="/doodles">Doodles</Link></li>
-//           <li><Link className="text-decoration-none menu-item" to="/connect">Connect</Link></li>
-//         </ul>
-//         </nav>
-//         <div className="app-vhheader-wrap">
-//           <VHHeader></VHHeader>
-//         </div>
-//         <div className="application-content pl3">
-//           <div className=".clearfix">
-//             {this.props.children}
-//           </div>
-//         </div>
-//       </div>
-//
-//     )
-//   }
-// })
-
+// history={browserHistory}
 render((
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route  path="/" component={App}>
-      <IndexRoute component={Home} />
       <Route path="about" component={About} />
       <Route path="portfolio" component={Portfolio} />
       <Route path="resume" component={Resume} />
       <Route path="doodles" component={Doodles} />
       <Route path="connect" component={SocialMedia} />
       <Route path="/*" component={Home} />
+      <IndexRoute component={Home} />
     </Route>
     <Route path="*" component={App} />
     <Redirect from="/" to="/" />
-  </Router>
+</Router>
 ), document.getElementById('app'))

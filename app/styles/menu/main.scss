@@ -2,4 +2,19 @@
   position : absolute;
   z-index: 100;
   top : 135px;
+  width : 50%;
+  // padding-left: 10%;
+  // the below takes the nav off the screen
+  // the click should toggle a transition animation
+  left : -10%;
+  transition-property : left;
+  transition-duration : 1s;
+  transition-delay: 0;
+}
+
+// create an animation to show the menu
+// need to also make it so that if you click anywhere else beside the menu-item
+// the nav should slide back
+.nav-container-show {
+  left : 8%;
 }
