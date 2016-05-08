@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SocialMedia from '../socialmedia/';
 
 export default class About extends React.Component {
   render() {
@@ -19,10 +20,10 @@ export default class About extends React.Component {
           This site is made with React!
         </section>
         <br/><br/>
-        <section className="col lg-col-12 mb1">
+        {/*<section className="col lg-col-12 mb1">
           This site is made with React!
         </section>
-        <br/><br/>
+        <br/><br/>*/}
         <section className="col lg-col-12 mb1">
           Javascript is cool. Angular and React are awesome. <br/>
           {/*I have experience with Java from my undergraduate studies. I like to play with different technologies in my free time.*/}
@@ -31,6 +32,10 @@ export default class About extends React.Component {
         <section className="col lg-col-12 mb1">
           I was a clothing salesman for 10 years in the Lower
           East Side Bargain District.
+        </section>
+        <br/><br/>
+        <section className="col lg-col-12 mb1">
+          <SocialMedia />
         </section>
       </div>
     )

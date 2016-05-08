@@ -1,0 +1,27 @@
+.portfolio {
+  display : flex;
+  justify-content: center;
+  flex-wrap : wrap;
+
+  .project {
+    width : 100%;
+    height : 300px;
+    border:1px solid rgba(0,0,0,0.059);
+    margin : 40px;
+    // flex-grow : 1;
+    overflow: hidden;
+
+    .project-img {
+      // width : 50%;
+      // min-width : 50%;
+      // min-height : 100%;
+    }
+    .blurb {
+      padding: 10px;
+      // width : 50%;
+      // min-width: 50%;
+      // min-height: 100%;
+    }
+
+  }
+}

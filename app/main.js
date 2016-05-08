@@ -17,9 +17,12 @@ import { Router, Route,
 
 class App extends React.Component {
 
-  toggleNav() {
+  toggleNav(type) {
     const content = document.getElementsByClassName("application-content")[0];
     const nav = document.getElementsByClassName("nav-container")[0];
+    if (type === "content"){
+      if (!nav.classList.contains("nav-container-show")) return;
+    }
     if (nav.classList.contains("nav-container-show")) {
       nav.classList.remove("nav-container-show")
     } else {
@@ -33,6 +36,16 @@ class App extends React.Component {
     }
   }
 
+  appContentToggleNav() {
+      // console.log(this);
+      this.toggleNav("content");
+  }
+
+  componentDidMount() {
+    // let content = document.getElementsByClassName("application-content")[0];
+    // content.addEventListener('click', this.toggleNav);
+  }
+
   render(){
     return (
       <div className="container application fit clearfix">
@@ -42,13 +55,12 @@ class App extends React.Component {
           <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/portfolio">Portfolio</Link></li>
           <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/resume">Resume</Link></li>
           <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/doodles">Doodles</Link></li>
-          <li><Link onClick={this.toggleNav} className="text-decoration-none menu-item" to="/connect">Connect</Link></li>
         </ul>
         </nav>
         <div className="app-vhheader-wrap">
           <VHHeader toggleNav={this.toggleNav}></VHHeader>
         </div>
-        <div className="application-content pl3">
+        <div className="application-content pl3" onClick={this.appContentToggleNav.bind(this)}>
           <div className=".clearfix main-surround">
             {this.props.children}
           </div>
@@ -65,7 +77,6 @@ render((
       <Route path="portfolio" component={Portfolio} />
       <Route path="resume" component={Resume} />
       <Route path="doodles" component={Doodles} />
-      <Route path="connect" component={SocialMedia} />
       <Route path="/*" component={Home} />
       <IndexRoute component={Home} />
     </Route>

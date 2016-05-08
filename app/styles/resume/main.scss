@@ -1,0 +1,22 @@
+.resume {
+  display : flex;
+  // justify-content: center;
+  // align-items: center;
+  flex-wrap : wrap;
+
+  .resume-link {
+    width : 100%;
+    min-width: 100%;
+  }
+
+  .resume-container {
+    width : 100%;
+    min-width: 100%;
+    overflow: none;
+
+    .embed {
+      width : 100%;
+      height : 600px;
+    }
+  }
+}

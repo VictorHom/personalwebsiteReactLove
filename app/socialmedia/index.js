@@ -3,7 +3,8 @@ import React from 'react';
 export default class SocialMedia extends React.Component {
   render() {
     return (
-      <div className="col lg-col-12 md-col-8 sm-col-8 p4">
+      // col lg-col-12 md-col-8 sm-col-8 p4
+      <div className="">
         <div className='social-media'>
           <ul>
             <li>
@@ -31,7 +32,7 @@ export default class SocialMedia extends React.Component {
                 <img src="dist/img/medium.svg" alt="medium blog"/>
               </a>
             </li>
-            <li>
+            {/*<li>
               <a target="_blank" href="https://www.pinterest.com/victorhom1/">
                 <img src="dist/img/pinterest.svg" alt="pinterest"/>
               </a>
@@ -40,7 +41,7 @@ export default class SocialMedia extends React.Component {
               <a target="_blank" href="https://twitter.com/HeyVicter">
                 <img src="dist/img/twitter.svg" alt="twitter"/>
               </a>
-            </li>
+            </li>*/}
           </ul>
         </div>
       </div>
