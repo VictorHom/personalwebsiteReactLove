@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Doodle from './doodle/';
 
 export default class Doodles extends React.Component {
  render() {
