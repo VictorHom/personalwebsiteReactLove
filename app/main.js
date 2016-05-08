@@ -2,7 +2,6 @@
 import './styles/index.scss';
 import Home from './home/';
 import Doodles from './doodles/';
-import About from './about/';
 import Portfolio from './portfolio/';
 import Resume from './resume/';
 import SocialMedia from './socialmedia/';
