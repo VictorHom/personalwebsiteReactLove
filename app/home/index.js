@@ -5,7 +5,19 @@ export default class About extends React.Component {
   render() {
     return (
       <div className="hom col lg-col-12 md-col-8 sm-col-8 p4">
-        <h1 className="greetings">Hello!</h1>
+        <section className="col lg-col-12 mb1 profile-thought">
+            <div className="thought-container">
+            <p className="thought">
+            homburgers or...<br />
+            should I go for a run first?
+            </p>
+            </div>
+            <div className="profile-container">
+            <img src="/dist/profile.jpg" className="profile"></img>
+            </div>
+        </section>
+        <div className="separator"></div>
+        <br/><br/>
         <section className="col lg-col-12 mb1">
           My name is Victor and I enjoy understanding the learning process.
           I am pursuing continuous learning in my work.<br/>
