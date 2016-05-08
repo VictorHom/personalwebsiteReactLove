@@ -24,7 +24,7 @@ export default class About extends React.Component {
         </section>
         <br/><br/>
         <section className="col lg-col-12 mb1">
-          Previously, I was a product engineer, helping customers solve technology problems.
+          Previously, I was a product engineer, helping engineers solve technology problems.
         </section>
         <br/><br/>
         <section className="col lg-col-12 mb1">
@@ -32,13 +32,8 @@ export default class About extends React.Component {
           This site is made with React!
         </section>
         <br/><br/>
-        {/*<section className="col lg-col-12 mb1">
-          This site is made with React!
-        </section>
-        <br/><br/>*/}
         <section className="col lg-col-12 mb1">
           Javascript is cool. Angular and React are awesome. <br/>
-          {/*I have experience with Java from my undergraduate studies. I like to play with different technologies in my free time.*/}
         </section>
         <br/><br/>
         <section className="col lg-col-12 mb1">
