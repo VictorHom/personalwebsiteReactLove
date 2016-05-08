@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-var Canvas = React.createClass({
-  componentDidMount : function() {
+export default class Canvas extends React.Component {
+  componentDidMount() {
     this.props.func(this.props.drawing, this.props.width, this.props.height);
-  },
-  render : function() {
+  }
+
+  render() {
     return (
       <div className="canvas">
         <div>{ this.props.name }</div>
@@ -13,6 +14,4 @@ var Canvas = React.createClass({
       </div>
     )
   }
-});
-
-module.exports = Canvas;
+}

@@ -1,0 +1,12 @@
+.doodles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .canvas {
+    max-width: 100%;
+    overflow-x: hidden;
+    border:1px solid rgba(0,0,0,0.059);
+    margin : 40px;
+  }
+}

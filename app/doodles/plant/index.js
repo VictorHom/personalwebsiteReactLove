@@ -6,9 +6,9 @@ function plant (drawing, width=500, height=500) {
     .attr("width", width)
     .attr("height", height);
   let start_pos_y = height;
-  let start_pos_x = width / 2;
+  let start_pos_x = width / 3;
 
-  let stemData = [ { "x": start_pos_x,   "y": start_pos_y}, {"x": start_pos_x,  "y" : start_pos_y - 250}];
+  let stemData = [ { "x": start_pos_x,   "y": start_pos_y}, {"x": start_pos_x,  "y" : start_pos_y - 400}];
   let leafData_left = [ {"x": start_pos_x, "y" : start_pos_y - 150}, {"x": start_pos_x - 10, "y" : start_pos_y - 155}]
   let leafData_right = [ {"x": start_pos_x, "y" : start_pos_y - 100}, {"x": start_pos_x + 10, "y" : start_pos_y - 105}]
 
